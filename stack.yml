@@ -1,0 +1,19 @@
+name: mysql
+title: MySQL
+icon: mysql
+
+services:
+- name: mysql
+  title: MySQL
+  service: mysql
+  volumes:
+  - name: data
+    size: 20
+
+- name: phpmyadmin
+  title: phpMyAdmin
+  service: phpmyadmin
+  disabled: true
+  links:
+  - name: db
+    service: mysql
