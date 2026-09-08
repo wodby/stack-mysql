@@ -5,6 +5,10 @@ Deploy MySQL applications on Kubernetes with Wodby.
 This repository defines the Wodby stack manifest and default service
 composition for MySQL.
 
+<!-- wodby:generated:start -->
+
+## Stack contract
+
 - [MySQL stack on Wodby](https://wodby.com/stacks/mysql)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
@@ -19,16 +23,20 @@ composition for MySQL.
 
 | Component / service | Default configuration |
 | --- | --- |
-| MySQL<br>`mysql` | optional; enabled by default; volume: `data` 20 GB |
-| phpMyAdmin<br>`phpmyadmin` | optional; disabled by default; link `db` → `mysql` |
+| MySQL<br>`mysql` | optional; enabled by default; volumes: `data` 20 GB |
+| phpMyAdmin<br>`phpmyadmin` | optional; disabled by default; links: `db` → `mysql` |
 
 Enabled optional services are selected by default but can be excluded when an
 app is created. Disabled optional services are available but not selected by
 default. Required services cannot be excluded.
 
-phpMyAdmin uses cookie authentication. The database host and port are supplied
-through the service link; database credentials are not injected into the
-phpMyAdmin container.
+## Validate the stack manifest
+
+```bash
+wodby stack validate-manifest stack.yml --org <org-id>
+```
+
+<!-- wodby:generated:end -->
 
 ## Deploy this stack
 
@@ -48,11 +56,3 @@ production environments.
 When replacing or renaming a stack service, update every related link target
 and derivative reference. Stack-local names and referenced service names are
 distinct identifiers.
-
-Validate the manifest with:
-
-```bash
-wodby stack validate-manifest stack.yml --org <org-id>
-```
-
-See the [stack manifest reference](https://wodby.com/docs/2.0/stacks/template/) and the [managed services index](https://github.com/wodby/services).
