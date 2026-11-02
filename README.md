@@ -11,6 +11,7 @@ composition for MySQL.
 
 - [MySQL stack on Wodby](https://wodby.com/stacks/mysql)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
+- [MySQL stack guide](https://wodby.com/docs/2.0/stacks/catalog/mysql/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
 - [Stack manifest reference](https://wodby.com/docs/2.0/stacks/template/)
 
