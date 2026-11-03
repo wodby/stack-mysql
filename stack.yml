@@ -1,6 +1,7 @@
 name: mysql
 title: MySQL
 icon: mysql
+docs: https://wodby.com/docs/2.0/stacks/catalog/mysql/
 
 services:
 - name: mysql
